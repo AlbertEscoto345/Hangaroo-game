@@ -5,7 +5,7 @@ from thirdfunction import getAvailableLetters
 lettersGuessed = [' ', ' ', ' ', ' ', ' ']
 mistakesMade = 0
 
-def InputEval(userinput, mistakesMade):
+def InputEval(userinput):
     if (userinput == 'c'):
         lettersGuessed[0+1] = lettersGuessed[0]
         lettersGuessed[0] = 'c'
@@ -26,52 +26,62 @@ def InputEval(userinput, mistakesMade):
         lettersGuessed[4] = 't'
         pass
     else:
-        mistakesMade = mistakesMade + 1
         print("Not one of the remaining unknown letters; guess again!")
         
+def MistakeCounter(mistakesMade):
+    if (userinput == 'c' or userinput == 'o' or userinput == 'm' or userinput == 'e' or userinput == 't'):
+        pass
+    else:
+        mistakesMade += 1
+    return mistakesMade
 
 lettersGuessed[0] = input("Guess a letter! ")
 userinput = lettersGuessed[0]
-InputEval(userinput, mistakesMade)
+InputEval(userinput)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+mistakesMade = MistakeCounter(mistakesMade)
 print(mistakesMade)
 
 lettersGuessed[1] = input("Guess a letter! ")
 userinput = lettersGuessed[1]
-InputEval(userinput, mistakesMade)
+InputEval(userinput)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)  
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+mistakesMade = MistakeCounter(mistakesMade)
 print(mistakesMade)
 
 lettersGuessed[2] = input("Guess a letter! ")
 userinput = lettersGuessed[2]
-InputEval(userinput, mistakesMade)
+InputEval(userinput)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)  
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+mistakesMade = MistakeCounter(mistakesMade)
 print(mistakesMade)
 
 lettersGuessed[3] = input("Guess a letter! ") 
 userinput = lettersGuessed[3]
-InputEval(userinput, mistakesMade) 
+InputEval(userinput) 
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed) 
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 print(returner)
+mistakesMade = MistakeCounter(mistakesMade)
 print(mistakesMade)
 
 lettersGuessed[4] = input("Guess a letter! ")
 userinput = lettersGuessed[4]
-InputEval(userinput, mistakesMade)        
+InputEval(userinput)        
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+mistakesMade = MistakeCounter(mistakesMade)
 print(mistakesMade)
 

@@ -3,62 +3,75 @@ from firstfunction import isWordGuessed
 from secondfunction import getGuessedWord
 from thirdfunction import getAvailableLetters
 lettersGuessed = [' ', ' ', ' ', ' ', ' ']
+mistakesMade = 0
 
-def InputEval(input):
-    if (input == 'c'):
+def InputEval(userinput, mistakesMade):
+    if (userinput == 'c'):
         lettersGuessed[0+1] = lettersGuessed[0]
         lettersGuessed[0] = 'c'
         pass
-    elif (input == 'o'):
+    elif (userinput == 'o'):
         lettersGuessed[1+1] = lettersGuessed[1]
         lettersGuessed[1] = 'o'
         pass
-    elif (input == 'm'):
+    elif (userinput == 'm'):
         lettersGuessed[2+1] = lettersGuessed[2]
         lettersGuessed[2] = 'm' 
         pass
-    elif (input == 'e'):
+    elif (userinput == 'e'):
         lettersGuessed[3+1] = lettersGuessed[3]
         lettersGuessed[3] = 'e' 
         pass
-    elif (input == 't'):
+    elif (userinput == 't'):
         lettersGuessed[4] = 't'
         pass
     else:
+        mistakesMade = mistakesMade + 1
         print("Not one of the remaining unknown letters; guess again!")
+        
 
 lettersGuessed[0] = input("Guess a letter! ")
-InputEval(input)
+userinput = lettersGuessed[0]
+InputEval(userinput, mistakesMade)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+print(mistakesMade)
 
 lettersGuessed[1] = input("Guess a letter! ")
-InputEval(input)
+userinput = lettersGuessed[1]
+InputEval(userinput, mistakesMade)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)  
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+print(mistakesMade)
 
 lettersGuessed[2] = input("Guess a letter! ")
-InputEval(input)
+userinput = lettersGuessed[2]
+InputEval(userinput, mistakesMade)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)  
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+print(mistakesMade)
 
 lettersGuessed[3] = input("Guess a letter! ") 
-InputEval(input) 
+userinput = lettersGuessed[3]
+InputEval(userinput, mistakesMade) 
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed) 
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 print(returner)
+print(mistakesMade)
 
 lettersGuessed[4] = input("Guess a letter! ")
-InputEval(input)        
+userinput = lettersGuessed[4]
+InputEval(userinput, mistakesMade)        
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)
 returner = isWordGuessed(secretWord, lettersGuessed)
 print(returner)
+print(mistakesMade)
 

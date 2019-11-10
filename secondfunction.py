@@ -1,5 +1,10 @@
 def getGuessedWord(secretWord, lettersGuessed):
-    returningstring = ['_', '_', '_', '_', '_']
+    if(lettersGuessed[1] == ' ' and lettersGuessed[2] == ' ' and lettersGuessed[3] == ' ' and lettersGuessed[4] == ' '):
+        returningstring = ['_', '_', '_', '_', '_']
+        global returningstringOLD
+        returningstringOLD = []
+    else:
+        returningstring = returningstringOLD
     if(lettersGuessed[0] == 'c'):
             returningstring[0] = 'c'
     else:
@@ -11,7 +16,7 @@ def getGuessedWord(secretWord, lettersGuessed):
     if(lettersGuessed[2] == 'm'):
             returningstring[2] = 'm'
     else:
-           pass  
+           pass
     if(lettersGuessed[3] == 'e'):
             returningstring[3] = 'e'
     else:
@@ -21,5 +26,6 @@ def getGuessedWord(secretWord, lettersGuessed):
     else:
            pass 
     
+    returningstringOLD = returningstring
     print (''.join(returningstring))
     return returningstring          

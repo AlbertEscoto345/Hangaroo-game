@@ -37,6 +37,7 @@ def MistakeCounter(mistakesMade):
 
 lettersGuessed[0] = input("Guess a letter! ")
 userinput = lettersGuessed[0]
+lettersGuessed = [element.lower() for element in lettersGuessed] ; lettersGuessed
 InputEval(userinput)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)
@@ -47,6 +48,7 @@ print(mistakesMade)
 
 lettersGuessed[1] = input("Guess a letter! ")
 userinput = lettersGuessed[1]
+lettersGuessed = [element.lower() for element in lettersGuessed] ; lettersGuessed
 InputEval(userinput)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)  
@@ -57,6 +59,7 @@ print(mistakesMade)
 
 lettersGuessed[2] = input("Guess a letter! ")
 userinput = lettersGuessed[2]
+lettersGuessed = [element.lower() for element in lettersGuessed] ; lettersGuessed
 InputEval(userinput)
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)  
@@ -67,6 +70,7 @@ print(mistakesMade)
 
 lettersGuessed[3] = input("Guess a letter! ") 
 userinput = lettersGuessed[3]
+lettersGuessed = [element.lower() for element in lettersGuessed] ; lettersGuessed
 InputEval(userinput) 
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed) 
@@ -77,6 +81,7 @@ print(mistakesMade)
 
 lettersGuessed[4] = input("Guess a letter! ")
 userinput = lettersGuessed[4]
+lettersGuessed = [element.lower() for element in lettersGuessed] ; lettersGuessed
 InputEval(userinput)        
 returningstring = getGuessedWord(secretWord, lettersGuessed)
 newAvailableLetters = getAvailableLetters(lettersGuessed)

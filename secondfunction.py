@@ -1,10 +1,11 @@
 def getGuessedWord(secretWord, lettersGuessed):
-    if(lettersGuessed[1] == ' ' and lettersGuessed[2] == ' ' and lettersGuessed[3] == ' ' and lettersGuessed[4] == ' '):
-        returningstring = ['_', '_', '_', '_', '_']
+    if(lettersGuessed[1] == ' ' and lettersGuessed[2] == ' ' and lettersGuessed[3] == ' '):
         global returningstringOLD
+        returningstring = ['_', '_', '_', '_', '_']
         returningstringOLD = []
     else:
         returningstring = returningstringOLD
+        
     if(lettersGuessed[0] == 'c'):
             returningstring[0] = 'c'
     else:

@@ -6,23 +6,23 @@ def Hangaroo(secretWord):
     mistakesMade = 0
 
     def InputEval(userinput):
-        if (userinput == 'c' and lettersGuessed[0] != 'c'):
+        if (userinput == 'c'):
             lettersGuessed[4] = lettersGuessed[0]
             lettersGuessed[0] = 'c'
             pass
-        elif (userinput == 'o' and lettersGuessed[1] != 'o'):
+        elif (userinput == 'o'):
             lettersGuessed[4] = lettersGuessed[1]
             lettersGuessed[1] = 'o'
             pass
-        elif (userinput == 'm' and lettersGuessed[2] != 'm'):
+        elif (userinput == 'm'):
             lettersGuessed[4] = lettersGuessed[2]
             lettersGuessed[2] = 'm' 
             pass
-        elif (userinput == 'e' and lettersGuessed[3] != 'e'):
+        elif (userinput == 'e'):
             lettersGuessed[4] = lettersGuessed[3]
             lettersGuessed[3] = 'e' 
             pass
-        elif (userinput == 't' and lettersGuessed[4] != 't'):
+        elif (userinput == 't'):
             lettersGuessed[4] = 't'
             pass
         else:
